@@ -5,7 +5,7 @@ from truco.cbr import Cbr, Dados
 import pandas as pd
 
 
-def criar_carta_mock(naipe, pontos_envido, classificacao=("Alta", 10)):
+def criar_carta_mock(naipe, pontos_envido):
     carta = MagicMock()
     carta.retornar_naipe.return_value = naipe
     carta.retornar_pontos_envido.side_effect = lambda c: c._pontos_envido
